@@ -27,7 +27,7 @@
 ###### 2016.11 - 至今
 
 >
-> Cloudmobi
+> Yeahmobi(北京)
 > 
 > 前端开发
 
@@ -40,7 +40,7 @@
 > 
 > 相关技术栈：
 > 
-> jquery, zepto, bootstrap, vue.js
+> jquery, zepto, bootstrap, vue.js...
 
 ###### 2016.10 - 2017.05
 
@@ -49,7 +49,7 @@
 > 
 > 相关技术栈：
 > 
-> vue.js, ElementUI, axios.js, ES6, scss
+> vue.js, ElementUI, axios.js, ES6, scss...
 > 
 > 熟练手写vue相关组件和js基类，使用scss搭建css样式基础库
 > 
@@ -71,7 +71,7 @@
 > 
 > 相关技术栈：
 > 
-> vue, vuex, vue-router, vue-cli, scss
+> vue, vuex, vue-router, vue-cli, scss...
 > 
 > 熟练手写vue组件，以及组件间通信，使用slot分发来处理特定逻辑等。
 > 
@@ -101,7 +101,7 @@
 > 
 > 相关技术栈：
 > 
-> webpack, ts, egg
+> webpack, ts, express...
 > 
 
 ###### 2018.10 - 2018.12
@@ -111,7 +111,7 @@
 > 
 > 相关技术栈：
 > 
-> vue, Echart.js, moment.js
+> vue, Element, Echart, moment, axios...
 
 ###### 2019.01 - 2019.04
 
@@ -120,16 +120,16 @@
 > 
 > 相关技术栈：
 > 
-> cocos，egret
+> cocos，egret...
 
 ###### 2019.05 - 至今
 
 > 
-> 持续对已有项目的维护和新功能的开发，在本职能力上的深耕，学习算法，并且对服务端知识的学习。
+> 持续对已有项目的维护和新功能的开发，能够自主进行前端架构，在本职能力上的深耕，学习算法，并且对服务端相关知识的学习。
 > 
 > 相关技术栈：
 > 
-> Nodejs, linux, sql等
+> Nodejs, express, koa, egg, linux, nginx, docker...
 > 
 
 ### 自我评价
