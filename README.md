@@ -19,12 +19,22 @@
 ###### 2015.10 - 2016.10
 
 * 中大英才网络教育科技有限公司
-* 高级前端开发
+* 前端开发
 
 ###### 2016.11 - 至今
 
 * Yeahmobi(北京)
-* 前端架构
+* 高级前端开发
+
+### 专业技能
+
+> html
+> css, scss
+> js, ts
+> vue全家桶
+> linux
+> node
+> nginx
 
 ### 项目经历
 
@@ -35,7 +45,7 @@
 > 
 > 相关技术栈：
 > 
-> jquery, zepto, bootstrap, vue.js...
+> jquery, bootstrap, vue等
 
 ###### 2016.10 - 2017.05
 
@@ -129,9 +139,8 @@
 
 ### 自我评价
 
-热爱技术，喜欢读书，乐于健身，富有强烈的责任感，拥有强大的自制力，相信技术的力量。
+热爱生活，努力工作。
 
 
 [我的掘金地址](https://juejin.im/user/57ffa882da2f60004fbfc60f)
 
-[github](https://github.com/ERVeepp)
