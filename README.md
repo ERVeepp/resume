@@ -44,9 +44,13 @@
 
 ## 工作经历
 
-### 2024.01 - 至今 | Youngs广告管理平台 & AI工具链
+### 2024.01 - 至今 | 云手机 & Youngs广告管理平台 & AI工具链
 
 **技术架构**: 微前端 + 组件化设计 + Rust WASM
+
+-云手机相关业务
+  - Youngs的H5模块的开发
+  - 华为云手机，阿里云手机的项目级研发
 
 - Youngs广告管理平台（SSP核心系统）：参考Facebook技术架构
 - 技术栈：Vue 3.5 + Vite 7.2 + TypeScript 5.9 + Rust WASM
@@ -55,7 +59,14 @@
   - 构建速度比Webpack快10倍，开发效率提升60%
   - 首屏加载时间优化至1.2秒，用户体验显著改善
 - 业务价值：提升广告位管理效率80%，支持日均千万级广告请求
-- Youngs的H5模块的开发
+
+- 浏览器自动化 & RPA系统：
+  - 自研Chrome插件：一键登录第三方平台 + 自动2FA验证码填写
+  - Web Crypto API原生实现TOTP（SHA1/Base32/30s），零依赖
+  - Playwright无头浏览器批量执行任务，支持登录态管理和截图审计
+  - bot_tasks任务调度系统：前端提交 → 后端入库 → 爬虫轮询执行 → 状态回写
+- 架构设计：前端/后端/爬虫三方解耦，通过统一API交互
+- 业务价值：将人工操作从5分钟/次降至全自动，日均处理200+任务
 
 **AI工具链搭建**
 - 本地AI部署：Ollama + OpenClaw + Qwen/Gemini多模型配置
@@ -72,25 +83,12 @@
 - Youngs广告管理平台核心开发
 
 ### 2022.01 - 2023.01 | ADX广告交易平台
-
-- MRAID 3.0 + VAST 4.2 + OpenRTB 2.6行业标准实现
-- 完整实现expand、resize、close、playVideo等核心API
-- Linear/NonLinear/Companion广告格式
-- BidRequest/BidResponse实时竞价协议
-- GDPR、CCPA用户同意管理(CMP)
-- 获得IAB全套标准认证，广告收益提升30%
+- ADX系统开发
 
 ### 2021.05 - 2022.01 | DPA动态产品广告系统
 
 - DPA系统开发
 - DPA模板开发
-- 浏览器自动化 & RPA系统：
-  - 自研Chrome插件：一键登录第三方平台 + 自动2FA验证码填写
-  - Web Crypto API原生实现TOTP（SHA1/Base32/30s），零依赖
-  - Playwright无头浏览器批量执行任务，支持登录态管理和截图审计
-  - bot_tasks任务调度系统：前端提交 → 后端入库 → 爬虫轮询执行 → 状态回写
-- 架构设计：前端/后端/爬虫三方解耦，通过统一API交互
-- 业务价值：将人工操作从5分钟/次降至全自动，日均处理200+任务
 
 ### 2021.01 - 2021.05 | BI数据分析平台
 
@@ -112,6 +110,12 @@
 - cloudmobi SSP管理后台开发
 - jsTag SDK开发
 - SDK模板开发：包含Mraid、Vast、VAPID、playable等广告形式和协议
+- MRAID 3.0 + VAST 4.2 + OpenRTB 2.6行业标准实现
+- 完整实现expand、resize、close、playVideo等核心API
+- Linear/NonLinear/Companion广告格式
+- BidRequest/BidResponse实时竞价协议
+- GDPR、CCPA用户同意管理(CMP)
+- 获得IAB全套标准认证，广告收益提升30%
 
 ---
 
