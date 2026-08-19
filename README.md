@@ -20,12 +20,12 @@
 
 ## 个人优势
 
-- 技术深度：Rust WASM + 全栈开发 + 20+技术栈精通
-- AI应用领先：团队AI工具推广领导者，效率提升40%
-- 国际化视野：参加谷歌开发者大会，与全球技术专家交流
-- 商业价值：技术方案直接转化商业收益，年度节省成本50万+
-- 开源贡献：npm社区工具包发布 + GitHub开源项目维护
-- 行业标准：IAB全套认证，MRAID 3.0 + VAST 4.2 + OpenRTB 2.6 + GDPR合规
+- **全栈纵深**：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层三层贯通，独立完成 40+ 业务页面、协议引擎、后端服务
+- **广告技术全链路**：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈（AppsFlyer 四层防御 + 红蓝对抗系统）
+- **AI Agent 全栈**：多 Agent 协作平台 + RAG 知识增强（Qdrant 向量检索）+ SSE 流式 + Function Calling，agent-core 核心库 + VS Code 插件（已上架）
+- **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动 + AI 评测体系（LLM-as-Judge + 黄金集）
+- **开源贡献**：npm 开源组件 dragsection（获 9 个下游依赖）+ GitHub 开源项目（github.com/ERVeepp）
+- **行业标准**：IAB 全套认证，MRAID 3.0 + VAST 4.2 + OpenRTB 2.6 + GDPR 合规
 
 ---
 
@@ -47,8 +47,10 @@
 | 移动调试 | ADB、Chrome DevTools、移动端性能优化 |
 | 系统运维 | Nginx、Docker、PM2、Linux服务器管理 |
 | 云服务 | AWS SDK、华为云、阿里云、CDN配置 |
-| AI工具链 | Kiro、ChatGPT、Copilot、Ollama、OpenClaw、通义灵码 |
-| 开发工具 | VSCode、WebStorm、Chrome DevTools MCP、Playwright |
+| AI框架 | LangChain、LangGraph、agent-core（自研）、Function Calling、SSE 流式 |
+| 向量数据库 | Qdrant、Embedding（OpenAI/BGE/nomic） |
+| AI工具链 | Kiro、ChatGPT、Copilot、Ollama、OpenClaw、通义灵码、MCP |
+| 开发工具 | VSCode、WebStorm、Chrome DevTools MCP、Playwright、Electron |
 
 ---
 
@@ -155,8 +157,22 @@
 - 全栈开发：Node.js后端、数据库设计、任务调度系统、服务器运维
 - 系统编程：Rust WASM高性能计算、Web Crypto API、零拷贝优化
 - 浏览器自动化：Chrome插件开发、Playwright RPA、TOTP 2FA自动化
-- AI应用：本地大模型部署（Ollama）、多模型网关配置、AI Agent集成
+- AI应用：多 Agent 平台（RAG 知识增强 + 向量检索）、LangChain/LangGraph、多模型热切换、MCP、本地大模型部署（Ollama）、AI 评测体系
 - 性能优化：全局定时器架构、虚拟滚动、按需加载、内存优化
+
+---
+
+## 个人项目（详细见 `项目经历.md`）
+
+| 项目 | 方向 | 亮点 |
+|------|------|------|
+| matrix-ai-agent | AI Agent 平台 | 多 Agent 协作 + RAG 知识增强（Qdrant）+ SSE 流式 + token 成本追踪 |
+| landing-page-builder | 低代码平台 | 拖拽编辑器 + 运行时 SDK + 6 层反作弊体系 |
+| ad-protocol-engine | 广告协议引擎 | 自研 MRAID 3.0/VAST 4.0，Rust/WASM 解析 7.6µs/次 |
+| ad-automation | 反作弊红蓝对抗 | CDP 真机 + 蓝方双归因模拟 + 5 种攻击方案 |
+| deepseek-harness-desktop | Electron 桌面 | Cordis 插件化 + 内置 Node 运行时 + 进程托管 |
+| agnes-ai-for-copilot | VS Code 插件 | 自定义模型接入 Copilot Chat，已上架 Marketplace |
+| dragsection | npm 开源组件 | Vue 3 拖拽区间选择，获 9 个下游依赖 |
 
 ---
 
