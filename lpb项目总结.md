@@ -55,4 +55,4 @@
 - **自测工具**：Playwright CDP 真机测试框架，以攻击方视角验证防护体系，发现并修复多个反作弊盲区
 - **AI 体系**：23 份编码规范 + 15 份踩坑记忆 + 17 个技能 + 3 个 Agent，通过编译期标签矩阵自动匹配项目，注入精准度提升 40%
 - **Spec 驱动**：10 个活跃 spec，覆盖 AI 辅助布局、引擎核心抽象、BFF 中间件等关键模块
-- **VS Code 插件**：agnes-ai-for-copilot 已上线 Marketplace，将自定义模型接入 Copilot Chat
+- **VS Code 插件**：Agnes AI - Copilot Chat Provider 已上线 Marketplace，将自定义模型接入 Copilot Chat
