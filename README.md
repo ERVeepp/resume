@@ -22,7 +22,7 @@
 
 - **全栈纵深**：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层三层贯通，独立完成 40+ 业务页面、协议引擎、后端服务
 - **广告技术全链路**：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈（AppsFlyer 四层防御 + 红蓝对抗系统）
-- **AI Agent 全栈**：多 Agent 协作平台 + RAG 知识增强（Qdrant 向量检索）+ SSE 流式 + Function Calling，agent-core 核心库 + VS Code 插件（已上架）
+- **AI Agent 全栈**：多 Agent 协作平台 + **文档/代码/多模态三 RAG**（Qdrant 向量检索 + tree-sitter 代码索引 + CLIP 图文检索）+ SSE 流式 + Function Calling，agent-core 核心库 + VS Code 插件（已上架）
 - **多模态 AI 生成**：基于 Pixelle-Video 跑通 AI 全自动短视频端到端流水线（LLM 文案 + 文生图/视频 + TTS + 合成）
 - **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动 + AI 评测体系（LLM-as-Judge + 黄金集）
 - **开源贡献**：npm 开源组件 dragsection（获 9 个下游依赖）+ GitHub 开源项目（github.com/ERVeepp）
