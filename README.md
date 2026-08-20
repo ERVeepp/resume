@@ -13,7 +13,7 @@
 | 文件 | 用途 |
 |------|------|
 | `个人优势.md` | 六大核心优势总结（GitHub Copilot / DeepSeek V4 Pro 基于 docs 知识库生成） |
-| `项目经历.md` | 7 个项目，按时间倒序，分项目描述 + 项目业绩 |
+| `项目经历.md` | 9 个项目，按时间倒序，分项目描述 + 项目业绩 |
 | `lpb项目总结.md` | 落地页平台 + 协议引擎 + 自测工具 + AI 体系详细展开 |
 | `web_youngs项目总结.md` | 广告平台前端系统详细展开 |
 | `resume-new.md` | 正式简历 |
@@ -23,6 +23,7 @@
 - **全栈纵深**：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层三层贯通，独立完成 40+ 业务页面、协议引擎、后端服务
 - **广告技术全链路**：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈（AppsFlyer 四层防御 + 红蓝对抗系统）
 - **AI Agent 全栈**：多 Agent 协作平台 + RAG 知识增强（Qdrant 向量检索）+ SSE 流式 + Function Calling，agent-core 核心库 + VS Code 插件（已上架）
+- **多模态 AI 生成**：基于 Pixelle-Video 跑通 AI 全自动短视频端到端流水线（LLM 文案 + 文生图/视频 + TTS + 合成）
 - **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动 + AI 评测体系（LLM-as-Judge + 黄金集）
 - **开源贡献**：npm 开源组件 dragsection（获 9 个下游依赖）+ GitHub 开源项目（github.com/ERVeepp）
 - **行业标准**：IAB 全套认证，MRAID 3.0 + VAST 4.2 + OpenRTB 2.6 + GDPR 合规
