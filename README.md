@@ -48,9 +48,11 @@
 | 移动调试 | ADB、Chrome DevTools、移动端性能优化 |
 | 系统运维 | Nginx、Docker、PM2、Linux服务器管理 |
 | 云服务 | AWS SDK、华为云、阿里云、CDN配置 |
-| AI框架 | LangChain、LangGraph、agent-core（自研）、Function Calling、SSE 流式 |
+| AI/Agent | RAG、Codebase RAG（tree-sitter）、Multi-Agent、Agentic、Function Calling、MCP、SSE 流式、Prompt Engineering |
+| AI 框架 | LangChain、LangGraph、agent-core（自研）、OpenAI 兼容协议 |
+| AI 工程化 | Spec-Driven（SDD）、Harness、评测体系（LLM-as-Judge / 黄金集 / 契约测试）、Vibe Coding |
 | 向量数据库 | Qdrant、Embedding（OpenAI/BGE/nomic） |
-| AI工具链 | Kiro、ChatGPT、Copilot、Ollama、OpenClaw、通义灵码、MCP |
+| AI 工具链 | Cursor、Claude Code、Copilot、Kiro、ChatGPT、Ollama、OpenClaw、通义灵码、MCP |
 | 开发工具 | VSCode、WebStorm、Chrome DevTools MCP、Playwright、Electron |
 
 ---
