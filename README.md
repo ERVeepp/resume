@@ -52,7 +52,7 @@
 | AI 框架 | LangChain、LangGraph、agent-core（自研）、OpenAI 兼容协议 |
 | AI 工程化 | Spec-Driven（SDD）、Harness、评测体系（LLM-as-Judge / 黄金集 / 契约测试）、Vibe Coding |
 | 向量数据库 | Qdrant、Embedding（OpenAI/BGE/nomic） |
-| AI 工具链 | Cursor、Claude Code、Copilot、Kiro、ChatGPT、Ollama、OpenClaw、通义灵码、MCP |
+| AI 工具链 | Kiro、VS Code Copilot、DeepSeek Harness（DSH）、ChatGPT、Ollama、OpenClaw、通义灵码、MCP |
 | 开发工具 | VSCode、WebStorm、Chrome DevTools MCP、Playwright、Electron |
 
 ---
