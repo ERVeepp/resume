@@ -41,8 +41,9 @@
 | 状态管理 | Pinia、Vuex、Redux、Context API |
 | CSS预处理 | Sass、Less、Stylus、PostCSS、TailwindCSS |
 | 测试框架 | Vitest、Jest、@testing-library、Cypress |
-| 后端开发 | Node.js 23、Nest.js、Egg.js、Express、Koa |
-| 数据库 | MySQL、MongoDB、Redis、PostgreSQL |
+| 后端开发 | Node.js 23、Nest.js、Egg.js、Express、Koa、Spring Boot 3（Java 17） |
+| 数据库 | MySQL、MongoDB、Redis、PostgreSQL、ClickHouse |
+| 实时计算 | Flink 1.20（SQL/PyFlink）、Kafka、Watermark 事件时间语义 |
 | 系统编程 | Rust、WebAssembly、C++基础 |
 | 移动广告 | MRAID 3.0、VAST 4.2、OpenRTB 2.6、GDPR合规 |
 | 移动调试 | ADB、Chrome DevTools、移动端性能优化 |
@@ -172,6 +173,7 @@
 | matrix-ai-agent | AI Agent 平台 | 多 Agent 协作 + RAG 知识增强（Qdrant）+ SSE 流式 + token 成本追踪 |
 | landing-page-builder | 低代码平台 | 拖拽编辑器 + 运行时 SDK + 6 层反作弊体系 |
 | ad-protocol-engine | 广告协议引擎 | 自研 MRAID 3.0/VAST 4.0，Rust/WASM 解析 7.6µs/次 |
+| ad-tech-labs | 广告实时竞价 | Go Bidder（OpenRTB 2.5）+ Kafka + Flink 窗口聚合 + ClickHouse |
 | ad-automation | 反作弊红蓝对抗 | CDP 真机 + 蓝方双归因模拟 + 5 种攻击方案 |
 | deepseek-harness-desktop | Electron 桌面 | Cordis 插件化 + 内置 Node 运行时 + 进程托管 |
 | agnes-ai-for-copilot | VS Code 插件 | 自定义模型接入 Copilot Chat，已上架 Marketplace |
