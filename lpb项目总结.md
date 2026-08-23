@@ -12,6 +12,7 @@
 - 设计并实现 6 层反作弊防御体系：客户端 Bot 检测、行为轨迹追踪、pageToken 一次性令牌、请求签名防重放、服务端滑动窗口限流、爬虫白名单 + iframe 检测
 - 制定组件 JSON-Schema 协议，统一编辑器与 SDK 的数据交互标准
 - 搭建 Monorepo（pnpm workspace）工程架构，含体积门禁 CLI 工具，管控 SDK 产物体积
+- 新增 **AI 编排器**：Vue Flow 节点图编排（条件/触发/埋点/分支/互动节点）+ DAG 校验（环检测/孤立节点）+ client-runtime 运行时解释器（信号传播驱动页面交互）+ AI 自然语言生成节点图（独立入口），`EditorComponent` schema 零改动、无编排页面完全向后兼容
 
 **广告协议引擎（Ad Protocol Engine）** — 独立开发
 
@@ -37,7 +38,7 @@
 
 | 类别 | 技能 |
 |------|------|
-| **前端** | Vue 3（Composition API + `<script setup>`）、TypeScript 严格模式、Pinia、Element Plus、SCSS、Vite |
+| **前端** | Vue 3（Composition API + `<script setup>`）、TypeScript 严格模式、Pinia、Element Plus、SCSS、Vite、Vue Flow 节点图编排 |
 | **后端** | NestJS、Express、Node.js、Redis、ClickHouse（架构设计） |
 | **系统编程** | Rust（WASM 编译、CLI 工具、Fuzzer）、Go（了解） |
 | **测试** | Vitest、Playwright（CDP 直连真机）、Rust cargo-fuzz |
@@ -51,6 +52,7 @@
 ## 工作业绩
 
 - **落地页平台**：完成编辑器 + SDK + Mock-Server 全栈开发，支撑广告投放业务；6 层反作弊体系已上线，有效防御 Puppeteer/Playwright 脚本刷量
+- **AI 编排器**：lpb 落地页交互编排层（节点图 + DAG 校验 + 运行时解释器 + AI 生成），`EditorComponent` schema 零改动、向后兼容，32 个编排单测
 - **协议引擎**：独立完成 98 个单元测试 + 27 个合规测试；Rust/WASM 解析性能达 7.6µs/次；支持五端 Bridge 架构
 - **自测工具**：Playwright CDP 真机测试框架，以攻击方视角验证防护体系，发现并修复多个反作弊盲区
 - **AI 体系**：23 份编码规范 + 15 份踩坑记忆 + 17 个技能 + 3 个 Agent，通过编译期标签矩阵自动匹配项目，注入精准度提升 40%
