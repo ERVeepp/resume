@@ -1,0 +1,216 @@
+# 项目经历
+
+> 生成日期：2026-08-06
+
+---
+
+## 广告平台前端系统（web_youngs）
+
+**时间**：2022.10 - 2026.05 ｜ **角色**：核心前端开发
+
+**技术栈**：Vue 3 + TypeScript + Pinia + Element Plus + ECharts + Vite + NestJS + Rust/WASM
+
+**项目描述**：DSP/SSP 程序化广告平台前端全栈系统，支撑日均百万级广告请求。DSP 侧覆盖广告投放管理（活动创建/定向/出价/素材）、报表分析（实时 + 离线多维度）、受众定向（人群包上传/标签筛选/Lookalike 扩量）、ADX 对接。SSP 侧覆盖媒体管理、广告网络配置、收益报表、对账系统。平台管理含多租户权限、数据看板（ECharts 6.x 大屏）、操作控制台。集成 Rust/WASM 高性能 CSV/Excel 解析（30s→2s）、Chrome 扩展（Manifest V3）、AI Agent 后端服务（NestJS + OpenAI API），实现自然语言驱动的智能数据查询。多环境构建 + Nginx 反向代理支撑开发/测试/生产独立部署。
+
+**项目业绩**：
+- 独立负责 40+ 业务页面全栈开发，覆盖 DSP/SSP 全链路
+- Rust/WASM 数据处理性能提升 15 倍（30s → 2s）
+- Chrome 扩展简化 AppsFlyer 多账号管理，日均节省运营 30 分钟
+- AI Agent 实现自然语言驱动的数据查询与分析
+
+---
+
+## 落地页低代码平台（Landing Page Builder）
+
+**时间**：2026.06 - 2026.08 ｜ **角色**：核心开发者
+
+**技术栈**：Vue 3 + Pinia + Element Plus + NestJS + Redis + TypeScript + Monorepo（pnpm） + Vue Flow
+
+**项目描述**：广告主自助创建投放页面的拖拽式低代码平台，pnpm Monorepo 架构，三大模块协同——编辑器（Vue 3 + Pinia + Element Plus）提供可视化拖拽搭建能力，运行时 SDK（TypeScript，IIFE 内联构建）负责第三方页面中渲染落地页并采集行为数据，Mock 服务（NestJS + Redis）模拟生产环境供开发调试。制定组件 JSON-Schema 协议统一编辑器与 SDK 的数据交互标准，设计 6 层反作弊防御体系（客户端 Bot 检测 → 行为轨迹追踪 → pageToken 一次性令牌 → 请求签名防重放 → 服务端滑动窗口限流 → 爬虫白名单 + iframe 检测）。体积门禁 CLI 管控 SDK 产物体积，Spec-Kit Lite 驱动 10 个活跃 spec 从需求到归档。新增 **AI 编排器**：Vue Flow 节点图编排（条件/触发/埋点/分支/互动节点）+ DAG 校验 + client-runtime 运行时解释器（信号传播驱动页面交互）+ AI 自然语言生成节点图，`EditorComponent` schema 零改动、向后兼容。
+
+**项目业绩**：
+- 完成编辑器 + SDK + Mock-Server 全栈开发，支撑广告投放业务
+- 6 层反作弊体系有效防御 Puppeteer/Playwright 脚本刷量
+- Monorepo + 体积门禁 CLI，管控 SDK 产物大小
+- Spec-Kit Lite 驱动 10 个活跃 spec
+- AI 编排器：节点图编排 + DAG 校验 + 运行时解释器 + AI 生成，32 个编排单测，向后兼容
+
+---
+
+## 广告协议引擎（Ad Protocol Engine）
+
+**时间**：2016.11 - 至今 ｜ **角色**：独立开发
+
+**技术栈**：TypeScript + Rust/WASM + tsup
+
+**项目描述**：从零自研 IAB 广告协议引擎，不是"调 SDK"而是"造 SDK"。采用三层架构——TypeScript 协议调度层负责生命周期管理和多端 Bridge 适配，Rust → WASM 解析核心实现 VAST XML 解析和 MRAID 状态机，Map 驱动协议分发层支持协议版本路由和扩展点注入。产出 CJS / ESM / IIFE / DTS 四格式产物，覆盖 Node.js 服务端、浏览器端、第三方页面内联等全场景。五端 Bridge 架构（iOS / Android / Web / CTV / OTT）通过统一接口抽象屏蔽平台差异，支持 MRAID 3.0 富媒体广告和 VAST 4.0 视频广告的完整协议生命周期。
+
+**项目业绩**：
+- 98 个单元测试 + 27 个合规测试
+- Rust/WASM 解析性能 7.6µs/次
+- 四格式产物覆盖 Node/浏览器/内联全场景
+
+---
+
+## 自动化反作弊验证工具（Ad Automation）
+
+**时间**：2024.05 - 至今 ｜ **角色**：独立开发
+
+**技术栈**：TypeScript + Playwright + Chrome CDP + ADB + Express + CloakBrowser
+
+**项目描述**：红蓝对抗系统，以攻击方视角验证归因反作弊体系。红队自测工具，Playwright CDP 直连真机 Chrome（ADB forward）模拟真实用户操作，含反检测注入（绕过 navigator.webdriver、Canvas 指纹伪装）、随机延时 + 贝塞尔曲线坐标偏移、滚动轨迹模拟等真人行为仿真。蓝方自建归因模拟平台（Express 模拟 AppsFlyer + Google Ads 双归因，last-click 归因引擎 + Protect360 6 条反欺诈规则 + Google 7 条规则）。红方 5 种攻击方案（curl flooding / Playwright + 设备指纹库 / CDP 真机 / CloakBrowser C++ 级去痕），配套设备指纹库（WebGL/canvas/字体注入）。系统拆解 AppsFlyer 四层防御体系（Cloudflare → 服务端校验 → SDK → Protect360）+ SKAdNetwork，沉淀攻击手法与防御弱点的成体系对照。
+
+**项目业绩**：
+- 攻防一体：攻击侧用 CDP 直连真机突破反爬，防守侧的 6 层防护据此迭代加固
+- 发现并修复多个反作弊盲区，包括 WebDriver 检测绕过、请求时序异常识别不足等
+- 真人行为仿真度达 85%+，有效测试防护体系在真实对抗场景下的表现
+- 自动化覆盖率 90%+，替代人工手动测试，验证效率提升 3 倍
+- 红蓝对抗系统：蓝方双归因模拟平台 + 红方 5 种攻击方案，覆盖 curl/Playwright/真机/CloakBrowser 全攻击面
+- Cloudflare 绕过研究：cf_clearance cookie 池 + TLS 指纹伪装（curl-impersonate）+ CDP 复用 session 三种方案
+- 归因反欺诈纵深：AppsFlyer 四层防御 + 15 个检测维度拆解，11 种攻击方案 spec 规划
+
+---
+
+## AI 辅助开发体系
+
+**时间**：2025.11 - 至今 ｜ **角色**：独立搭建
+
+**技术栈**：Node.js + YAML + Markdown + VS Code API + Electron
+
+**项目描述**：设计并落地三层 AI 资产生命周期管理体系——instructions（编码规范，按文件类型/技术栈精准注入）→ memories（踩坑记忆，会话级和仓库级分层存储）→ skills/agents（专项技能 + 流程 Agent，用自然语言触发复杂任务链）。核心工程创新是编译期标签矩阵：`projects.yaml` 定义项目技术栈标签 → `sync-ai-assets.mjs` 在编译期展开为精确的 glob 匹配规则 → 一源多发同步到 VS Code / Cursor / Claude Code 等 6 个编辑器。Spec 驱动开发基于 **openspec 基座 + Spec Kit 七阶段方法论**，A+C 门禁插件（歧义扫描 → 强制澄清 → 契约验收 → 黄金集回归）驱动 60+ 活跃 spec 从需求到归档全链路闭环。VS Code 插件 Agnes AI - Copilot Chat Provider 将自定义模型接入 Copilot Chat，已上架 Marketplace。**DeepSeek Harness Desktop（DSH）**：Electron 桌面壳包装 DeepSeek Harness，内置 Node 运行时（`ELECTRON_RUN_AS_NODE=1`，终端用户免装 Node）、DSH 版本管理（内置 pnpm 按版本动态安装 npm 包，升级只换版本号不改壳）、本地进程托管（spawn 子进程 + 就绪探测 + 健康检查 + 异常自动重启 + 优雅回收）。
+
+**项目业绩**：
+- 23 份规范 + 23 份踩坑记忆 + 20 个专项技能 + 6 个角色 Agent（70 资产注册表，覆盖 vue/nestjs/go/python 岗位）
+- AI 资产文件化 + 本地文档 RAG（Qdrant copilot_docs，语义检索黄金集命中 100%）
+- docs 知识库重构为「知识库/求职」6 类结构，跨 6 仓库引用同步；openspec 公开仓库（github.com/ERVeepp/openspec）
+- 注入精准度提升 40%（匹配量从 8 份降至 4 份）
+- VS Code 插件 Agnes AI - Copilot Chat Provider 已上架 Marketplace
+- DSH 桌面壳：内置 Node 运行时免装依赖，进程托管含健康检查与异常自愈，版本升级零改壳
+
+---
+
+## DSH 插件生态开发（dsh-plugins）
+
+**时间**：2026.08 - 至今 ｜ **角色**：独立开发
+
+**技术栈**：TypeScript + Cordis（插件框架）+ DeepSeek Harness + pnpm Monorepo + systeminformation + npm/GitHub 生态
+
+**项目描述**：为 DeepSeek Harness（DSH，"一切皆插件"的 Agent Harness）从零开发并发布两个开源插件，跑通完整上线链路（GitHub topic → 1024Store 插件市场收录 → npm 发布）。理解 DSH 的 Cordis 插件模型（`name` / `inject` / `apply(ctx)` + `ctx.tools.register(defineTool)`）与 bundle 规范（`dsh.bundle.patch`，插件可被 git/npm 安装并激活）。
+
+- **npm 包引入前审查（npm-advisor）**：给 DSH Agent 增加依赖选型判断——拉取 npm registry 元数据（deprecated / 维护健康度 / README 头部迁移声明）+ 内置「原生替代 / 弃坑包」映射表，输出 mermaid 依赖树；设计原则是「事实由插件给、选型由模型裁决」，README 迁移声明让模型能识别"原作者换代、该选新包"。
+- **硬件性能评测（hardware-benchmark）**：读取本机硬件（CPU / 内存代数 / 磁盘 / GPU / 网卡 / 电池），工程开发 + 游戏性能双维打分 + Cloudflare 实测网速；生成 DIY 玩家口吻的升级建议（DDR4→DDR5 兼容性判断、性价比排序、推荐规格 + 实时查价搜索词）。价格不硬编码，由模型按搜索词实时查。
+
+**工程实践**：采集与评分分离的纯函数设计（mock 硬件 profile 即可验证，不依赖真机）；Spec-Kit Lite 三件套（requirements/design/tasks）驱动开发；沉淀可复用的发布 SOP（topic → 1024Store PR 自动合并 → npm publish，含 2FA/传播延迟等踩坑）。
+
+**项目业绩**：
+- 两个插件全流程上线：`dsh-plugin` topic + 1024Store 市场收录（PR 自动合并）+ npm 发布（@cqpdrcuk 下 2 个包）
+- npm-advisor：原生替代映射表 + README 迁移声明识别，帮模型判断"已弃坑 / 原作者换代"
+- hardware-benchmark：双维评分 + 网速实测 + DIY 升级建议，13 项 mock 断言验证
+- 发布 SOP 沉淀：从开发验证到 1024Store 收录、npm 2FA 发布全流程可复用
+
+---
+
+## AppsFlyer 数据抓取工具（appsflyer-bot）
+
+**时间**：2026.04 - 2026.05 ｜ **角色**：独立开发
+
+**技术栈**：NestJS + BullMQ + Playwright + SQLite
+
+**项目描述**：基于 NestJS + BullMQ 消息队列的定时任务系统，通过 Playwright 自动化操控浏览器抓取 AppsFlyer 后台的广告投放数据（消耗、展示、点击、转化等指标），经清洗转换后入库 SQLite，支持多账号并发调度与失败重试。解决运营团队手动登录多账号逐条导出数据的痛点，为后续数据分析和报表提供自动化数据源。
+
+---
+
+## AI Agent 平台（matrix-ai-agent）
+
+**时间**：2026.04 - 至今 ｜ **角色**：独立开发
+
+**技术栈**：NestJS + OpenAI API + SQLite + Qdrant + LangChain/LangGraph + TypeScript + Monorepo（pnpm）+ Docker
+
+**项目描述**：从零搭建的多 Agent 协作平台，NestJS Monorepo 架构。核心设计思想是将 Agent 抽象为可组合的独立单元——每个 Agent 拥有独立的系统提示词、工具链和上下文窗口，通过统一的路由调度层（关键词快速匹配 + LLM 意图分类兜底）实现多 Agent 并行协作与消息分发。agent-core 核心库（tsup 构建）封装了 Agent 基类、工具注册器、会话管理器、LLM 适配器等基础设施，与业务逻辑完全解耦，作为独立 npm 包可复用于下游项目。采用 OpenAI 兼容协议对接模型，SSE 流式输出逐 token 推送，Function Calling 工具编排循环支持模型自主决策调用数据查询、知识检索等工具。Docker 容器化部署（node:22-alpine 产物镜像 + SQLite 数据卷 + docker-compose）。已接入 web_youngs 广告平台，运营人员可用自然语言完成数据查询、报表分析和异常排查。
+
+围绕 Qdrant 构建**三形态检索（RAG）体系**：
+- **文档 RAG**：KnowledgeAgent 从飞书关键词搜索升级为向量语义检索——文档分块 → Embedding（Ollama）→ Qdrant（993 chunks），向量召回 + 引用溯源（title/source 回传），多租户 productId payload 过滤；chat/embedding 模型分离；黄金集检索评测。重排/混合检索/成本追踪列入迭代计划。
+- **Codebase RAG**：tree-sitter（WebAssembly 免编译）按函数/类边界解析代码库，提取 符号/签名/实现体/filePath → Qdrant `code_docs`（149 chunks）→ 代码语义检索，黄金集 top5 命中率 **80%**，支撑 AI 生成/修改代码前检索现有实现与调用关系。
+- **多模态素材检索**：CLIP（ViT-B/32 图文同空间 512 维，mise 管理 Python 环境）对 56 张素材图编码入 Qdrant `media_docs`，实现文搜图/图搜图（图搜图自检 **100%**）+ 黄金集评估框架。
+
+**项目业绩**：
+- 多 Agent 架构：专业 Agent 并行协作（独立工具链 + 统一路由调度），SSE 流式 + Function Calling 多轮工具循环，OpenAI 兼容协议换模型只改配置，插件式工具注册
+- 三形态 RAG（Qdrant）：文档（993 chunks，语义匹配 + 引用溯源 + 多租户 payload 过滤）+ Codebase（tree-sitter 函数级索引，黄金集命中 80%）+ 多模态素材（CLIP 图文对齐，图搜图自检 100%），配合 PaddleOCR 双层合规门禁
+- LangGraph 可选引擎（2026.08）：loopEngine/graphEngine 按子 Agent 切换，SqliteSaver checkpoint 跨进程持久化 + 节点级断点续跑（interrupt()/resume，verify-resume 端到端验证）+ subgraph 状态共享；收益数据支撑选型（loop 0.2ms vs graph 16.6ms）
+- Harness 评测四层全落地：语法（node --check 保存前拦截）+ 契约（input→expected 深比较）+ 黄金集回归前置门禁，LLM-as-Judge 四维打分事后抽检，把"事后回归"升级为"事中门禁"
+- AI Coding Pipeline（batch-generate，2026.08）：模板+参数 → 变体 → 语法/契约门禁 → 自动分支/PR，首次通过率；--llm 真生成 + Spec 契约驱动生成（contract 外约门禁 + 落盘 golden）
+- CI 变更门禁：batch-generate 变体门禁 + regression-all 黄金集回归（退化 exit 1），AI 生成纳入发布前自动校验
+- agent-core 独立构建发布（Monorepo）+ SQLite 会话持久化 + Docker 部署；已落地 web_youngs（自然语言查数/报表/异常排查）
+- AI Coding 工具（Kiro / Copilot / DSH）Vibe Coding 深度开发 + Sub-agent 委派实践
+
+---
+
+## 开源组件库（dragsection）
+
+**时间**：2023 ｜ **角色**：独立开发
+
+**技术栈**：Vue 3 + TypeScript + Vite
+
+**项目描述**：发布到 npm 的开源 Vue 3 拖拽区间选择组件（`npm i dragsection`），支持拖拽选择连续区间（如时间段），通过 `@up` 事件回调返回选中区间数组。MIT 开源协议，已获 9 个下游项目依赖。
+
+**项目业绩**：
+- 独立完成组件设计、开发、打包、发布到 npm 的全流程
+- 开源组件获 9 个 dependents 下游依赖，验证组件抽象与 API 设计能力
+
+---
+
+## AI 全自动短视频生成引擎（Pixelle-Video）
+
+**时间**：2026.07 - 至今 ｜ **角色**：深度实践 / 集成应用
+
+**技术栈**：多模态生成（Seedream / Seedance / Kling / WAN 2.1）+ LLM + TTS（Edge-TTS / Index-TTS）+ 视频合成
+
+**项目描述**：基于 AIDC-AI 开源引擎 Pixelle-Video 深度实践 AI 全自动短视频流水线。输入主题即可端到端产出完整视频：LLM 自动撰写解说文案 → 文生图/文生视频（接入 Seedream / Seedance / Kling / WAN 2.1 等多模态生成模型）→ 多语言 TTS 语音合成 → BGM 配乐 → 自动合成成片。掌握动作迁移、图生视频、数字人口播、自定义素材（上传照片/视频自动分析生成脚本）等生成能力，理解多模态生成模型的能力边界与选型差异，理解「LLM 编排 + 多模态生成模型调度 + 组装合成」的 AI 创作平台架构。
+
+**项目业绩**：
+- 跑通「主题 → 完整视频」端到端生成流水线，零剪辑经验产出成片
+- 掌握文生图 / 文生视频 / TTS 多模态模型生态（Seedream / WAN 2.1 / Kling 等）能力与差异
+- 理解 AI 创作平台架构：LLM 编排流水线 + 多模态生成模型调度 + 组装合成
+
+---
+
+## 广告投放 Agent 全链路系统（ad-tech-labs）
+
+**时间**：2026.07 - 至今 ｜ **角色**：独立开发
+
+**技术栈**：Go 1.26 + OpenRTB 2.5 + Kafka + Flink 1.20（SQL/PyFlink）+ ClickHouse + Docker Compose
+
+**项目描述**：从程序化竞价引擎**演进到投放自动化全链路**（同一仓库 ad-tech-labs，可现场演示）。
+
+- **竞价引擎（2026.07）**：真实页面 → Header Bidding → Go Bidder（OpenRTB 2.5 标准竞价接口 POST /bid）→ 竞价日志异步写 Kafka → Flink 1.20 集群 5s 滚动窗口聚合（service+imp_id 分组：bid_requests/bid_wins/avg_price/win_rate）→ Kafka Engine 落 ClickHouse 实时指标。核心是事件时间语义：Watermark 允许 5s 乱序，解决竞价日志乱序导致的窗口错配。
+- **投放 Agent 全链路（2026.08，5 个 Go 服务）**：
+  - **交互层（launch :18600）**：一句话起投——自然语言解析投放意图（服务/广告位/预算/出价）→ 调媒体 API 创建 campaign（意图层可替换，落地层稳定，生产接 LLM）
+  - **执行层（media-adapter :18300）**：mock 媒体平台 + 多租户 RBAC（admin/operator/viewer，租户隔离跨租户 404）+ 花钱动作门禁（预算上限/参数校验，拦截留审计）+ 审计带 actor
+  - **风控层（guard）**：预算熔断（消耗达预算 90% 自动暂停）+ 异常消耗 spike 告警（速率突变 3x）
+  - **策略层（strategy :8200）**：营销策略引擎——读实时指标按规则产出调控指令（出价系数/预算上限）+ 用户权益分层 + 黄金集评估（改坏规则被拦截，pass_rate 1.0）
+  - **创意层（dco :18500）**：DCO 动态创意——模板 slot + 候选池，按实时信号（用户分层/时段/渠道）tags 匹配组材，无匹配回退默认
+  - **验证层（ab-test :18400）**：AB 实验——稳定哈希分桶 + 效果回收 + lift/增量判断（简化显著性）
+
+**项目业绩**：
+- 打通「Header Bidding → Go Bidder → Kafka → Flink → ClickHouse」端到端实时链路，5s 窗口输出 RPS/胜率/eCPM，win_rate≈0.6；Flink 事件时间 + Watermark 处理竞价日志乱序
+- Go 实现 OpenRTB 2.5 标准竞价接口，不依赖第三方 SDK
+- 投放 Agent 全链路"我的职责" 6 缺口落地 5 项（媒体 API / 风控 / 权限审计 / AB / DCO），离线管道按整合者判断合理暂缓（无算法模型即空转）
+- 端到端实测：改价 13.50→16.20 落地、超预算熔断、viewer 403、AB lift +15% effective、三种信号三种创意组合、一句话起投成功
+- Spec-Kit Lite 三件套驱动 6 个 spec 从需求到归档（`docs/specs/archive/`）
+- CI/CD 落地（2026.08）：Go/Nest/Flink 多语言镜像 + GitHub Actions + 生产 compose，多服务一键部署
+- 工具化：matrix Agent 挂 8 个投放工具（策略 4 + 媒体 4），写操作全过 RBAC + 门禁 + 审计
+- 工程化规划（方案设计）：复用反作弊（行为打标）与 RBAC 审计沉淀的"审计 + 门禁"模式，设计团队代码提交检测工具 PRD——敏感扫描（正则 + 高熵）、GPG 验签归属校验、门禁分层（BLOCK/WARN）与基线管理（概念设计、未上线）
+
+---
+
+## 终端最小 Coding Agent（agent-loop-tui）
+
+**时间**：2026.08 ｜ **角色**：独立开发
+
+**技术栈**：Node.js + Ink（React 终端渲染）+ TypeScript
+
+**项目描述**：从零实现终端最小 Coding Agent——Ink TUI 交互界面 + Agentic Loop 核心复刻（工具调用循环、上下文管理、最大轮次防死循环）。基于 OpenCode 核心链路拆解（摘要压缩 + 重建请求 + 可回溯的超长上下文处理），理解 Coding Agent 底牌：Agentic Loop、Tool Calling、上下文窗口管理与退化回退。
+
+**项目业绩**：
+- Ink TUI + Agentic Loop 完整复刻，可交互的终端 Coding Agent
+- 拆解 OpenCode 核心链路，沉淀「超长上下文处理 = 摘要压缩 + 重建请求 + 可回溯」方法论
