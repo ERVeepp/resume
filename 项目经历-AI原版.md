@@ -82,7 +82,7 @@
 **项目业绩**：
 - 23 份规范 + 23 份踩坑记忆 + 20 个专项技能 + 6 个角色 Agent（70 资产注册表，覆盖 vue/nestjs/go/python 岗位）
 - AI 资产文件化 + 本地文档 RAG（Qdrant copilot_docs，语义检索黄金集命中 100%）
-- docs 知识库重构为「知识库/求职」6 类结构，跨 6 仓库引用同步；openspec 公开仓库（github.com/ERVeepp/openspec）
+- docs 知识库重构为「知识库/求职」6 类结构，跨 6 仓库引用同步；openspec 实践（Spec 驱动，可演示）
 - 注入精准度提升 40%（匹配量从 8 份降至 4 份）
 - VS Code 插件 Agnes AI - Copilot Chat Provider 已上架 Marketplace
 - DSH 桌面壳：内置 Node 运行时免装依赖，进程托管含健康检查与异常自愈，版本升级零改壳
