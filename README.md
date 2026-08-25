@@ -16,7 +16,6 @@
 | `个人优势-AI原版.md` | AI 生成原版（保留作对比） |
 | `项目经历.md` | 12 个项目拟人化完整版（直接上简历，第一人称叙述 + 关键量化） |
 | `项目经历-AI原版.md` | 12 个项目 AI 生成原版（保留作对比） |
-| `项目经历精简版.md` | 12 个项目精简版（投简历用，每个项目压缩为「内容 + 业绩」） |
 | `lpb项目总结.md` | 落地页平台 + 协议引擎 + 自测工具 + AI 体系详细展开 |
 | `web_youngs项目总结.md` | 广告平台前端系统详细展开 |
 | `工作经历.md` | 3 家公司工作经历（内容 + 业绩两块，拟人化，直接上简历） |
@@ -45,7 +44,7 @@
 | 状态管理 | Pinia、Vuex、Redux、Context API |
 | CSS预处理 | Sass、Less、Stylus、PostCSS、TailwindCSS |
 | 测试框架 | Vitest、Jest、@testing-library、Cypress |
-| 后端开发 | Node.js 23、Nest.js、Egg.js、Express、Koa、Spring Boot 3（Java 17） |
+| 后端开发 | Node.js 23、Nest.js、Egg.js、Express、Koa |
 | 数据库 | MySQL、MongoDB、Redis、PostgreSQL、ClickHouse |
 | 实时计算 | Flink 1.20（SQL/PyFlink）、Kafka、Watermark 事件时间语义 |
 | 系统编程 | Rust、WebAssembly、C++基础 |
