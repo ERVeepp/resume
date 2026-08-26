@@ -29,7 +29,7 @@
 **AI 辅助开发体系** — 独立搭建
 
 - 设计并落地三层 AI 资产生命周期体系：23 份编码规范 + 15 份踩坑记忆 + 17 个专项技能 + 3 个流程 Agent
-- 开发 `sync-ai-assets.mjs` 一源多发脚本，编译期将标签矩阵展开为精确的文件匹配规则，同步到 VS Code / Cursor / Claude Code 等 6 个编辑器
+- 开发 `sync-ai-assets.mjs` 一源多发脚本，编译期将标签矩阵展开为精确的文件匹配规则，同步到 VS Code / Qoder / Codex / DSH / Kiro / Cursor 等 6 个编辑器
 - 建立 Spec 驱动开发工作流（Spec-Kit Lite），10 个活跃 spec，覆盖需求 → 设计 → 任务 → 归档全流程
 
 ---

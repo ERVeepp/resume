@@ -77,7 +77,7 @@
 
 **技术栈**：Node.js + YAML + Markdown + VS Code API + Electron
 
-**项目描述**：设计并落地三层 AI 资产生命周期管理体系——instructions（编码规范，按文件类型/技术栈精准注入）→ memories（踩坑记忆，会话级和仓库级分层存储）→ skills/agents（专项技能 + 流程 Agent，用自然语言触发复杂任务链）。核心工程创新是编译期标签矩阵：`projects.yaml` 定义项目技术栈标签 → `sync-ai-assets.mjs` 在编译期展开为精确的 glob 匹配规则 → 一源多发同步到 VS Code / Cursor / Claude Code 等 6 个编辑器。Spec 驱动开发基于 **openspec 基座 + Spec Kit 七阶段方法论**，A+C 门禁插件（歧义扫描 → 强制澄清 → 契约验收 → 黄金集回归）驱动 60+ 活跃 spec 从需求到归档全链路闭环。VS Code 插件 Agnes AI - Copilot Chat Provider 将自定义模型接入 Copilot Chat，已上架 Marketplace。**DeepSeek Harness Desktop（DSH）**：Electron 桌面壳包装 DeepSeek Harness，内置 Node 运行时（`ELECTRON_RUN_AS_NODE=1`，终端用户免装 Node）、DSH 版本管理（内置 pnpm 按版本动态安装 npm 包，升级只换版本号不改壳）、本地进程托管（spawn 子进程 + 就绪探测 + 健康检查 + 异常自动重启 + 优雅回收）。
+**项目描述**：设计并落地三层 AI 资产生命周期管理体系——instructions（编码规范，按文件类型/技术栈精准注入）→ memories（踩坑记忆，会话级和仓库级分层存储）→ skills/agents（专项技能 + 流程 Agent，用自然语言触发复杂任务链）。核心工程创新是编译期标签矩阵：`projects.yaml` 定义项目技术栈标签 → `sync-ai-assets.mjs` 在编译期展开为精确的 glob 匹配规则 → 一源多发同步到 VS Code / Qoder / Codex / DSH / Kiro / Cursor 等 6 个编辑器。Spec 驱动开发基于 **openspec 基座 + Spec Kit 七阶段方法论**，A+C 门禁插件（歧义扫描 → 强制澄清 → 契约验收 → 黄金集回归）驱动 60+ 活跃 spec 从需求到归档全链路闭环。VS Code 插件 Agnes AI - Copilot Chat Provider 将自定义模型接入 Copilot Chat，已上架 Marketplace。**DeepSeek Harness Desktop（DSH）**：Electron 桌面壳包装 DeepSeek Harness，内置 Node 运行时（`ELECTRON_RUN_AS_NODE=1`，终端用户免装 Node）、DSH 版本管理（内置 pnpm 按版本动态安装 npm 包，升级只换版本号不改壳）、本地进程托管（spawn 子进程 + 就绪探测 + 健康检查 + 异常自动重启 + 优雅回收）。
 
 **项目业绩**：
 - 23 份规范 + 23 份踩坑记忆 + 20 个专项技能 + 6 个角色 Agent（70 资产注册表，覆盖 vue/nestjs/go/python 岗位）
