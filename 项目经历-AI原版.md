@@ -120,7 +120,7 @@
 
 ---
 
-## AI Agent 平台（matrix-ai-agent）
+## AI Agent 平台（matrix-ai-agent · 升级为长任务 Agent 平台）
 
 **时间**：2026.04 - 至今 ｜ **角色**：独立开发
 
@@ -133,6 +133,8 @@
 - **Codebase RAG**：tree-sitter（WebAssembly 免编译）按函数/类边界解析代码库，提取 符号/签名/实现体/filePath → Qdrant `code_docs`（149 chunks）→ 代码语义检索，黄金集 top5 命中率 **80%**，支撑 AI 生成/修改代码前检索现有实现与调用关系。
 - **多模态素材检索**：CLIP（ViT-B/32 图文同空间 512 维，mise 管理 Python 环境）对 56 张素材图编码入 Qdrant `media_docs`，实现文搜图/图搜图（图搜图自检 **100%**）+ 黄金集评估框架。
 
+**升级为长任务执行平台（2026.08）**：在底座上增加长任务可靠执行与广告全链路 Agent 化——长任务生命周期管理（断点续跑 / 重试 / 心跳 / 预算熔断，Temporal 编排设计中，LangGraph checkpoint 断点续跑已落地）；**广告全链路 Agent 化**：投放 Agent（data_query 挂 8 个投放工具调策略引擎与媒体 Adapter：一句话起投 / 调价 / 实时防超预算）、报表 Agent（查 ClickHouse 出周报）、巡检 Agent（素材在投 / 违规 / 缺图批量巡检 + 告警）、竞品分析 Agent；花钱动作过**写三档权限（读自主 / 写确认 / 敏感双人）+ 门禁 + 审计**，决策输出可解释 JSON（`expected_impact` 锚点回测决策质量）；已接入 SSP 广告平台（go_youngs）。
+
 **项目业绩**：
 - 多 Agent 架构：专业 Agent 并行协作（独立工具链 + 统一路由调度），SSE 流式 + Function Calling 多轮工具循环，OpenAI 兼容协议换模型只改配置，插件式工具注册
 - 三形态 RAG（Qdrant）：文档（993 chunks，语义匹配 + 引用溯源 + 多租户 payload 过滤）+ Codebase（tree-sitter 函数级索引，黄金集命中 80%）+ 多模态素材（CLIP 图文对齐，图搜图自检 100%），配合 PaddleOCR 双层合规门禁
@@ -141,6 +143,9 @@
 - AI Coding Pipeline（batch-generate，2026.08）：模板+参数 → 变体 → 语法/契约门禁 → 自动分支/PR，首次通过率；--llm 真生成 + Spec 契约驱动生成（contract 外约门禁 + 落盘 golden）
 - CI 变更门禁：batch-generate 变体门禁 + regression-all 黄金集回归（退化 exit 1），AI 生成纳入发布前自动校验
 - agent-core 独立构建发布（Monorepo）+ SQLite 会话持久化 + Docker 部署；已落地 web_youngs（自然语言查数/报表/异常排查）
+- 长任务执行：断点续跑 / 重试 / 心跳 / 预算熔断（Temporal 编排设计中）；LangGraph checkpoint 已落地
+- 投放 Agent：data_query 挂 8 个投放工具，写操作过门禁 + 审计（已落地）；决策契约 JSON + expected_impact 锚点（已落地）
+- 广告全链路场景：**投放 Agent 已落地**（5 Go 服务 + spec 归档可演示）；报表 / 巡检 / 竞品持续推进；对接 SSP（go_youngs）：Agent 工具直调其 API
 - AI Coding 工具（Kiro / Copilot / DSH）Vibe Coding 深度开发 + Sub-agent 委派实践
 
 ---

@@ -6,6 +6,7 @@
 > 更新：2026-08-20 补充 Codebase RAG 落地（tree-sitter 代码索引，黄金集命中率 80%）+ Pixelle-Video 多模态生成实践
 > 更新：2026-08-24 补充广告投放 Agent 全链路落地（交互/执行/风控/策略/创意/验证 5 服务）
 > 更新：2026-08-25 补充 Spec 驱动体系升级（openspec 基座 + Spec Kit 七阶段 + A+C 门禁插件）+ AI 资产文件化与本地文档 RAG（黄金集命中 100%）
+> 更新：2026-08-29 补充长任务执行平台（matrix 升级：长任务可靠执行 + 广告全链路 Agent 化）+ 对接 SSP 广告平台（Agent 直调 API）
 > GitHub：[github.com/ERVeepp](https://github.com/ERVeepp)
 
 ---
@@ -41,6 +42,7 @@
 ## 三、AI 工程化实践：LLM 应用 + Agent 平台 + RAG 全栈深度
 
 - 大模型应用：从零搭建多 Agent 平台（matrix-ai-agent），SSE 流式输出、Function Calling 工具编排、意图路由（关键词 + LLM 分类）、OpenAI 兼容协议接入，已落地广告平台，运营用自然语言做数据查询
+- **长任务执行平台（matrix 升级版）**：长任务可靠执行（断点续跑 / 重试 / 心跳 / 预算熔断）+ **广告全链路 Agent 化（投放 Agent 已落地：一句话起投 / 调价 / 防超预算，5 Go 服务 + spec 归档）**，花钱动作过写三档（读自主 / 写确认 / 敏感双人）+ 门禁 + 审计，决策输出可解释 JSON 可回测；对接 SSP 广告平台（Agent 工具直调其 API：建 offer / 查报表 / 巡检）
 - **AI Coding 工具深度使用**：日常用 Kiro / VS Code Copilot / DeepSeek Harness（DSH）做 Vibe Coding（Spec 驱动 + 上下文工程），理解 Agentic Loop / Tool Calling / Sub-agent 委派 / Prompt Engineering 底层机制
 - RAG 知识增强：KnowledgeAgent 从关键词搜索升级为向量库语义检索——分块 → Embedding → Qdrant 存储 → 向量召回 + 引用溯源，多租户 productId payload 过滤；重排/混合检索列入迭代计划
 - **Codebase RAG 落地**：tree-sitter（WebAssembly，免编译）按函数/类边界解析代码库，提取 符号/签名/实现体 → Embedding → Qdrant `code_docs` → 代码语义检索 + 黄金集评估（top5 命中率 80%），支撑 AI 生成/修改代码前检索现有实现与调用关系
@@ -102,7 +104,7 @@
 
 1. **全栈纵深**：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层三层贯通，独立完成 40+ 业务页面、协议引擎、后端服务全栈开发
 2. **广告技术全链路**：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈（AppsFlyer 四层防御研究 + 红蓝对抗系统 + 6 层反作弊体系）+ 素材合规巡检（PaddleOCR 提取素材内文字过违禁词 + CLIP 语义双层门禁）
-3. **AI Agent 全栈**：从零搭建多 Agent 平台（SSE 流式 + Function Calling + 意图路由 + 文档/Codebase/多模态三 RAG，LangChain/LangGraph 编排实战）+ agent-core 核心库 + VS Code 插件（已上架）+ Electron 桌面壳 + **DSH 插件生态（2 个已上线 1024Store + npm）** + 多模态生成流水线（Pixelle-Video）+ 日常用 Kiro / VS Code Copilot / DeepSeek Harness（DSH）做 Vibe Coding（理解 Sub-agent 委派 / Prompt Engineering），覆盖平台/架构/双端宿主/生态插件
+3. **AI Agent 全栈**：从零搭建多 Agent 平台（SSE 流式 + Function Calling + 意图路由 + 文档/Codebase/多模态三 RAG，LangChain/LangGraph 编排实战）+ **升级长任务执行平台（断点续跑 / 心跳 / 预算熔断 + 广告全链路 Agent 化：投放 Agent 已落地，写三档 + 门禁 + 审计，决策 JSON 可回测）** + agent-core 核心库 + VS Code 插件（已上架）+ Electron 桌面壳 + **DSH 插件生态（2 个已上线 1024Store + npm）** + 多模态生成流水线（Pixelle-Video）+ 日常用 Kiro / VS Code Copilot / DeepSeek Harness（DSH）做 Vibe Coding（理解 Sub-agent 委派 / Prompt Engineering），覆盖平台/架构/双端宿主/生态插件
 4. **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动开发（openspec 基座 + Spec Kit 七阶段 + 门禁插件）+ 资产文件化与本地文档 RAG（黄金集命中 100%）+ 评测四层全落地（前三层前置门禁 + LLM-as-Judge 抽检），让 AI 协作可复制、可度量
 5. **工程素养**：Monorepo + 体积门禁 CLI + CI/CD + Docker 部署 + 流式部署调优的完整交付能力
 6. **开源贡献**：npm 开源组件 dragsection（获 9 个下游项目依赖）+ GitHub 开源项目（github.com/ERVeepp）
@@ -110,7 +112,7 @@
 **AI Agent + 全栈综合版（推荐）**：
 
 1. 全栈工程能力：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层，独立完成 40+ 页面全栈开发与协议引擎架构设计
-2. AI Agent 平台：从零搭建多 Agent 协作平台，SSE 流式输出 + Function Calling 工具编排 + 意图路由（关键词 + LLM 分类）+ OpenAI 兼容协议
+2. AI Agent 平台：从零搭建多 Agent 协作平台，SSE 流式输出 + Function Calling 工具编排 + 意图路由（关键词 + LLM 分类）+ OpenAI 兼容协议，**升级长任务执行平台（断点续跑 / 预算熔断 + 广告全链路 Agent 化：投放 Agent 已落地，写操作过门禁 + 审计）**
 3. Agent 架构与产品化：agent-core 核心库独立构建发布，VS Code 插件已上架 Marketplace，Electron 桌面壳（内置 Node 运行时 + 进程托管 + 版本管理）
 4. AI 资产体系与评测：三层 AI 资产生命周期（instructions/memories/skills/agents）+ 编译期标签矩阵 + 一源多发 6 编辑器 + 评测四层全落地（语法/契约/黄金集前置门禁 + LLM-as-Judge）
 5. 广告技术纵深：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈红蓝对抗（AppsFlyer 四层防御 + 6 层反作弊）+ 素材合规巡检（PaddleOCR 字层 + CLIP 语义双层门禁）
@@ -133,7 +135,7 @@
 
 **AI Agent 岗版（裁掉广告业务细节）**：
 
-1. AI 平台开发：从零搭建多 Agent 协作平台（NestJS + OpenAI 兼容协议），SSE 流式输出 + Function Calling 工具编排 + 意图路由
+1. AI 平台开发：从零搭建多 Agent 协作平台（NestJS + OpenAI 兼容协议），SSE 流式输出 + Function Calling 工具编排 + 意图路由，**升级长任务执行平台（断点续跑 / 心跳 / 预算熔断 + 广告全链路 Agent 化：投放 Agent 已落地，写操作过门禁 + 审计）**
 2. RAG 知识增强：向量库语义检索（Qdrant + Embedding + 重排 + 引用溯源 + 多租户隔离），LangChain/LangGraph 实战 + 自研选型
 3. Agent 架构：agent-core 核心库独立构建发布，与业务解耦，可复用于下游项目
 4. AI 资产体系与评测：编译期标签矩阵 + 一源多发，23 份规范 + 17 个技能 + 3 个 Agent 精准注入 6 个编辑器；评测四层全落地（Harness 守门员）
