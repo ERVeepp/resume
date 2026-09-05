@@ -37,6 +37,22 @@
 
 ---
 
+## 混量系统控制台（leapmob-web-hl · 网盟 Affiliate Network）
+
+**时间**：2026.08 - 至今（v1 开发中）｜ **角色**：前端独立开发
+
+**技术栈**：Vue 3 + TypeScript + Element Plus + Pinia + vue-router 4 + ECharts + Vite 7 + vite-plugin-mock
+
+**项目描述**：网盟（Affiliate Network / CPI 广告联盟）后台控制台，统一管理广告主、渠道、Offer、配量规则与数据报表，服务三角色（admin / AM 运营 / BD 商务）。技术选型**对齐 web_youngs 架构平移**（axiosReq 封装 / 动态路由 + 权限守卫 / Pinia / ECharts option 驱动组件），规避重复造轮子。两个工程化亮点：① **Spec 驱动下沉到真实业务项目**——把 openspec CLI 从工作区治理应用到业务项目：v1 需求 6 个 capability 固化为 `specs/` 主规范基线（供后续功能 delta 的 MODIFY 锚定），拆分为「需求 change（已归档）+ 执行 change（design + tasks，W1-W8）」两段式，`pnpm spec:validate` 全量过 CLI 结构校验（主 spec + change 共 7 项）；② **契约先行协作**——`api/openapi.yaml` 作为前后端唯一接口事实源，前端基于 vite-plugin-mock 契约 mock 先行（比后端晚约 1 周进同模块），8 项评审口径问题（分页结构/幂等/币种等）走完确认闭环。
+
+**项目业绩**：
+- Vue3 控制台：登录 + 8 功能页 + 布局壳，三级角色（admin/AM/BD）菜单 + 按钮权限（前端显隐层 + 后端真鉴权 403）
+- openspec 业务级落地：v1 需求基线化 + 执行 change 拆分 + CLI validate 门禁（7 项全过）
+- 契约先行：openapi.yaml 唯一源 + mock 先行，前后端并行开发
+- 前端 28 人日按 W1-W8 Wave 任务化推进（tasks.md）
+
+---
+
 ## 广告协议引擎（Ad Protocol Engine）
 
 **时间**：2016.11 - 至今 ｜ **角色**：独立开发
