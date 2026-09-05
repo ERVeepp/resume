@@ -55,6 +55,7 @@
 - Agent 宿主集成：VS Code 插件（Agnes AI - Copilot Chat Provider）+ Electron 桌面壳（deepseek-harness-desktop）+ **DSH 插件生态开发（dsh-plugins，2 个插件已上线）** 三形态——Electron 内置 Node 运行时（`ELECTRON_RUN_AS_NODE=1`，终端用户免装 Node）、进程托管（spawn / 就绪探测 / 健康检查 / 异常自动重启 / 优雅回收）、版本管理（内置 pnpm 按版本动态安装 npm 包，升级只换版本号不改壳）；DSH 侧理解 Cordis 插件模型与 bundle 规范，npm 包引入审查 + 硬件性能评测两插件已收录 1024Store 市场并发布 npm
 - 不只是用 Copilot 聊天补全，而是搭了一套完整的三层 AI 资产生命周期体系（instructions/memories/skills/agents）
 - 开发了编译期标签矩阵 + 一源多发同步脚本，准确将规范注入到 6 个编辑器
+- 注入体量治理（2026-09）：诊断出注入文件 22KB 中 ~68% 是 70+ 资产的索引表，用「名称 + 一句话 + README 指针」替换长索引后，注入文件 21.9KB → 15.6KB（-29%）——上下文工程有方法、有量化
 - **Spec 驱动体系（openspec 基座 + Spec Kit 七阶段）**：把 openspec 当执行引擎（结构/变更/校验），方法论对齐 Spec Kit 七阶段，A+C 门禁插件（歧义扫描 → 强制澄清 → 契约验收 → 黄金集回归）；用真实业务 change 走通「需求 → 澄清 → 四件套 → validate → 实现 → 门禁 → 归档」全链路闭环，60+ 活跃 spec
 - **AI 资产工程化**：70 个 AI 资产（agents/skills/instructions/memories）文件化注册表（assets.yaml）+ 本地文档 RAG（Qdrant copilot_docs，语义检索黄金集命中 100%）+ 6 个角色型 Agent（vue/nestjs/go/python 的 feature/bugfix/quick 流程编排）；docs 知识库重构为「知识库/求职」6 类结构，跨 6 仓库引用同步
 - VS Code 插件已上架 Marketplace
@@ -105,7 +106,7 @@
 1. **全栈纵深**：Vue 3 前端 + NestJS/Go 后端 + Rust/WASM 底层三层贯通，独立完成 40+ 业务页面、协议引擎、后端服务全栈开发
 2. **广告技术全链路**：DSP/SSP/ADX 全链路 + 自研 IAB MRAID 3.0/VAST 4.0 协议引擎 + 归因反欺诈（AppsFlyer 四层防御研究 + 红蓝对抗系统 + 6 层反作弊体系）+ 素材合规巡检（PaddleOCR 提取素材内文字过违禁词 + CLIP 语义双层门禁）
 3. **AI Agent 全栈**：从零搭建多 Agent 平台（SSE 流式 + Function Calling + 意图路由 + 文档/Codebase/多模态三 RAG，LangChain/LangGraph 编排实战）+ **升级长任务执行平台（断点续跑 / 心跳 / 预算熔断 + 广告全链路 Agent 化：投放 Agent 已落地，写三档 + 门禁 + 审计，决策 JSON 可回测）** + agent-core 核心库 + VS Code 插件（已上架）+ Electron 桌面壳 + **DSH 插件生态（2 个已上线 1024Store + npm）** + 多模态生成流水线（Pixelle-Video）+ 日常用 Kiro / VS Code Copilot / DeepSeek Harness（DSH）做 Vibe Coding（理解 Sub-agent 委派 / Prompt Engineering），覆盖平台/架构/双端宿主/生态插件
-4. **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动开发（openspec 基座 + Spec Kit 七阶段 + 门禁插件）+ 资产文件化与本地文档 RAG（黄金集命中 100%）+ 评测四层全落地（前三层前置门禁 + LLM-as-Judge 抽检），让 AI 协作可复制、可度量
+4. **AI 工程化**：三层 AI 资产生命周期 + 编译期标签矩阵一源多发 6 编辑器 + Spec 驱动开发（openspec 基座 + Spec Kit 七阶段 + 门禁插件，CLI 已落地真实业务项目）+ 上下文注入治理（22KB→15.6KB，-29%）+ 资产文件化与本地文档 RAG（黄金集命中 100%）+ 评测四层全落地（前三层前置门禁 + LLM-as-Judge 抽检），让 AI 协作可复制、可度量
 5. **工程素养**：Monorepo + 体积门禁 CLI + CI/CD + Docker 部署 + 流式部署调优的完整交付能力
 6. **开源贡献**：npm 开源组件 dragsection（获 9 个下游项目依赖）+ GitHub 开源项目（github.com/ERVeepp）
 
