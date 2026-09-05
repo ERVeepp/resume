@@ -53,6 +53,21 @@
 
 ---
 
+## 本地 K8s + Jenkins 全链路 CI/CD 平台
+
+**时间**：2026.08 ｜ **角色**：独立搭建
+
+**技术栈**：Docker Desktop（内置 kind + containerd）+ Kubernetes + Jenkins（声明式 Pipeline）+ Gitea + kubectl
+
+**项目描述**：为满足容器化部署与 CI/CD 要求，在本地 Docker Desktop 从零打通 Kubernetes + Jenkins + Gitea 全链路：Gitea 仓库配 webhook，git push 自动触发 Jenkins 声明式 Pipeline（拉码 → Docker 构建镜像 → 推送私有 Registry → kubectl 滚动部署 → 对外访问）。踩通新版 Docker Desktop 内置 K8s（kind + containerd）的关键坑：镜像走共享存储部署（docker build 的镜像 k8s 直接可见，不走 registry 中转）、NodePort 本地不可达改 port-forward、kubeconfig 容器内适配（host.docker.internal + 跳过 TLS 校验）、容器化 12-factor 改造（连接地址 / 数据文件外置）。并用真实项目 ad-tech-labs（Go 竞价服务）在统一流水线上完成容器化改造与滚动部署。
+
+**项目业绩**：
+- 全链路 CI/CD：push 自动触发 构建 → 镜像 → 滚动部署 → 回滚，demo-app + ad-bidder 双项目验证
+- 实战踩坑沉淀：共享镜像存储部署、Kafka 跨网络 listener、Jenkins 密码重置、k8s 部署 12-factor 改造
+- 分层部署：无状态应用进 k8s、有状态中间件（Kafka/ClickHouse）留 docker-compose
+
+---
+
 ## 广告协议引擎（Ad Protocol Engine）
 
 **时间**：2016.11 - 至今 ｜ **角色**：独立开发
